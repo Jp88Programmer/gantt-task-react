@@ -2,6 +2,7 @@ import React from "react";
 import { Task, ViewMode, Gantt } from "gantt-task-react";
 import { ViewSwitcher } from "./components/view-switcher";
 import { getStartEndDateForProject, initTasks } from "./helper";
+import { theme } from "./theme";
 import "gantt-task-react/dist/index.css";
 
 // Init
@@ -68,7 +69,10 @@ const App = () => {
   };
 
   return (
-    <div className="Wrapper">
+    <div
+      className="Wrapper"
+      style={{ background: theme.theme, color: theme.color }}
+    >
       <ViewSwitcher
         onViewModeChange={viewMode => setView(viewMode)}
         onViewListChange={setIsChecked}
@@ -87,6 +91,8 @@ const App = () => {
         onExpanderClick={handleExpanderClick}
         listCellWidth={isChecked ? "155px" : ""}
         columnWidth={columnWidth}
+        backgroundColor={theme.theme}
+        textColor={theme.color}
       />
       <h3>Gantt With Limited Height</h3>
       <Gantt
@@ -102,6 +108,8 @@ const App = () => {
         listCellWidth={isChecked ? "155px" : ""}
         ganttHeight={300}
         columnWidth={columnWidth}
+        backgroundColor={theme.theme}
+        textColor={theme.color}
       />
     </div>
   );

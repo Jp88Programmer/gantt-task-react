@@ -29,6 +29,8 @@ export const TaskListTableDefault: React.FC<{
   locale: string;
   tasks: Task[];
   selectedTaskId: string;
+  backgroundColor: string;
+  textColor: string;
   setSelectedTask: (taskId: string) => void;
   onExpanderClick: (task: Task) => void;
 }> = ({
@@ -39,6 +41,8 @@ export const TaskListTableDefault: React.FC<{
   fontSize,
   locale,
   onExpanderClick,
+  backgroundColor,
+  textColor
 }) => {
   const toLocaleDateString = useMemo(
     () => toLocaleDateStringFactory(locale),
@@ -51,6 +55,8 @@ export const TaskListTableDefault: React.FC<{
       style={{
         fontFamily: fontFamily,
         fontSize: fontSize,
+        backgroundColor:backgroundColor,
+        color:textColor
       }}
     >
       {tasks.map(t => {

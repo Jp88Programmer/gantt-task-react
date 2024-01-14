@@ -36,6 +36,8 @@ export const Gantt: React.FunctionComponent<GanttProps> = ({
   locale = "en-GB",
   barFill = 60,
   barCornerRadius = 3,
+  backgroundColor = "#ffffff",
+  textColor = "#000",
   barProgressColor = "#a3a3ff",
   barProgressSelectedColor = "#8282f5",
   barBackgroundColor = "#b8c2cc",
@@ -393,6 +395,7 @@ export const Gantt: React.FunctionComponent<GanttProps> = ({
     tasks: tasks,
     rowHeight,
     dates: dateSetup.dates,
+    backgroundColor,
     todayColor,
     rtl,
   };
@@ -404,6 +407,8 @@ export const Gantt: React.FunctionComponent<GanttProps> = ({
     columnWidth,
     fontFamily,
     fontSize,
+    backgroundColor,
+    textColor,
     rtl,
   };
   const barProps: TaskGanttContentProps = {
@@ -441,6 +446,8 @@ export const Gantt: React.FunctionComponent<GanttProps> = ({
     headerHeight,
     scrollY,
     ganttHeight,
+    backgroundColor,
+    textColor,
     horizontalContainerClass: styles.horizontalContainer,
     selectedTask,
     taskListRef,

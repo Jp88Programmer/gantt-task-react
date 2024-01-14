@@ -100,6 +100,8 @@ export interface StylingOption {
    * From 0 to 100
    */
   barFill?: number;
+  backgroundColor?: string;
+  textColor?: string;
   barProgressColor?: string;
   barProgressSelectedColor?: string;
   barBackgroundColor?: string;

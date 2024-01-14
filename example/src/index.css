@@ -1,6 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .Wrapper {
   margin-bottom: 2rem;
+  padding: 1rem;
 }
+
 .ViewContainer {
   list-style: none;
   -ms-box-orient: horizontal;
@@ -29,6 +37,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .Switch_Toggle {
   position: relative;
   display: inline-block;
@@ -67,15 +76,15 @@
   transition: 0.4s;
 }
 
-input:checked + .Slider {
+input:checked+.Slider {
   background-color: #2196f3;
 }
 
-input:focus + .Slider {
+input:focus+.Slider {
   box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked + .Slider:before {
+input:checked+.Slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
